@@ -15,7 +15,7 @@ function App() {
     },
   ]);
   return (
-    <div className="App">
+    <main className="App">
       {post.map((card, index) => {
         return (
           <DisplayCard
@@ -29,7 +29,7 @@ function App() {
         );
       })}
       <PostForm post={post} setPost={setPost}/>
-    </div>
+    </main>
   );
 }
 
