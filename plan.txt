@@ -1,0 +1,13 @@
+
+Posting feature
+- database so data persists
+- Postgresql database
+
+WEbpage
+-Ftech request to the database
+
+GEt
+POST - Start with just text or hyperlinks
+
+CRA framework
+
