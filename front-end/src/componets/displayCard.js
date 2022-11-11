@@ -13,7 +13,9 @@ export const DisplayCard = ({
       <div className="displayCardBody">
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href={link}>click here!</a>
+        <a href={link} target="_blank" rel="noreferrer">
+          click here!
+        </a>
       </div>
     </div>
   );
