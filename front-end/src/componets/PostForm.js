@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import "../style/postForm.css"
 
-const PostForm = () => {
+const PostForm = ({post, setPost}) => {
 
     const [form,setForm] = useState(
         {
@@ -10,7 +10,7 @@ const PostForm = () => {
             description: "",
             link: "",
             imageURL: "",
-            imageAlt: ""
+            imageALT: ""
         }
     )
 
@@ -21,7 +21,16 @@ const PostForm = () => {
         }
 
         function handleSubmit() {
-            //post request goes here
+            setPost([...post, form])
+            setForm(
+                {
+                    name: "",
+                    title: "",
+                    description: "",
+                    link: "",
+                    imageURL: "",
+                    imageALT: ""
+                })
         }
 
     return (
@@ -48,8 +57,8 @@ const PostForm = () => {
             <input type="text" id="imageURL" name="imageURL" placeholder='URL of a preview image' value={form.imageURL} onChange={handleChange}></input>
             </div>
             <div className="postFormInput">
-            <label forhtml="imageAlt">ImageTitle:</label>
-            <input type="text" id="imageAlt" name="imageAlt" placeholder='Brief description of image' value={form.imageAlt} onChange={handleChange}></input>
+            <label forhtml="imageALT">ImageTitle:</label>
+            <input type="text" id="imageALT" name="imageALT" placeholder='Brief description of image' value={form.imageALT} onChange={handleChange}></input>
             </div>
             <button onClick={handleSubmit}>Submit</button>
         </div>

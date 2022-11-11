@@ -28,7 +28,7 @@ function App() {
           />
         );
       })}
-      <PostForm />
+      <PostForm post={post} setPost={setPost}/>
     </div>
   );
 }
